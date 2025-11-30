@@ -66,6 +66,12 @@ int main() {
     float pib_per_capita2 = pib2 / populacao2;
     float densidade_populacional2 = populacao2 / area2 ;
 
+    //ARMAZENAMENTO SUPER TRUNFO - SOMA DO RESULTADO DE CADA CARTA
+
+int super_trunfo1 = populacao1 + area1 + pib1 + pontos1 + pib_per_capita1;
+int super_trunfo2 = populacao2 + area2 + pib2 + pontos2 + pib_per_capita2;
+
+
     //EXIBIÇÃO DAS CARTAS CADASTRADAS
     printf("----CARTAS CADASTRADAS----\n\n");
     
@@ -81,6 +87,7 @@ int main() {
   printf("Pontos Turisticos: %d\n", pontos1);
   printf("Densidade Populacional:  %.2f hab/km²\n" , densidade_populacional1 );
   printf("PIB PER CAPITA:  %.2f Reais\n\n" , pib_per_capita1 );
+  printf("SUPER TRUNFO: %u /n" , super_trunfo1);
 
 
   //CARTA 2
@@ -95,12 +102,10 @@ int main() {
   printf("Pontos Turisticos: %d\n", pontos2);
   printf("Densidade Populacional: %.2f hab/km²\n" , densidade_populacional2 );
   printf("PIB PER CAPITA:  %.2f Reais\n" , pib_per_capita2 );
+  printf("SUPER TRUNFO: %u \n" , super_trunfo2);
 
 
-//ARMAZENAMENTO SUPER TRUNFO - SOMA DO RESULTADO DE CADA CARTA
 
-float super_trunfo1 = populacao1 + area1 + pib1 + pontos1 + pib_per_capita1;
-float super_trunfo2 = populacao2 + area2 + pib2 + pontos2 + pib_per_capita2;
 
 //COMPARAÇÃO DAS CARTAS - DEFININDO O VENCEDOR COM ESTRUTURA DE DECISÃO
 
@@ -166,8 +171,8 @@ if (pib_per_capita1 > pib_per_capita2) {
   }
         
   printf("\nATRIBUTO: SUPER TRUFO\n");
- printf("\nCidade 1 %s : %u \n" , cidade1 , super_trunfo1);
- printf("Cidade 2 %s  : %u \n" , cidade2 , super_trunfo2);
+ printf("\nCidade 1 %s : %f \n" , cidade1 , super_trunfo1);
+ printf("Cidade 2 %s  : %f \n" , cidade2 , super_trunfo2);
 
 if (super_trunfo1 > super_trunfo2) {
   printf("Cidade 1 GANHOU NO SUPER TRUFO.\n");
