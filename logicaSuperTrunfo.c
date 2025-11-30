@@ -1,8 +1,3 @@
-#include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-
 
 #include <stdio.h>
 
@@ -18,9 +13,6 @@ int main() {
     int pontos1;
     float area1;
     float pib1;
-    float pib_per_capita1;
-    float densidade_populacional1;
-
    
     //Variáveis para a carta 2
     char estado2[50];
@@ -30,10 +22,6 @@ int main() {
     int pontos2;
     float area2;
     float pib2;
-    float pib_per_capita2;
-    float densidade_populacional2;
-
-    
 
    //ENTRADA DE DADOS DA CARTA 1
     printf("PREENCHA AS INFORMAÇÕES DAS SUAS CARTAS \n");
@@ -169,7 +157,7 @@ if (densidade_populacional1 > densidade_populacional2) {
 
 printf("\nATRIBUTO: PIP PER CAPITA \n");
  printf("\nCidade 1 %s : %.2f \n" , cidade1 , pib_per_capita1);
- printf("Cidade 2 %s  : %.2f \n" , cidade2 ,pib_per_capita2);
+ printf("Cidade 2 %s  : %.2f \n" , cidade2 , pib_per_capita2);
 
 if (pib_per_capita1 > pib_per_capita2) {
   printf("Cidade 1 tem maior PIB PER CAPITA.\n");
