@@ -114,22 +114,22 @@ int main() {
  printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 ,populacao2);
 
 if (populacao1 > populacao2) {
-  printf("GANHOU Cidade 1 tem maior população.\n");
+ printf("GANHOU Cidade 1 tem maior população.\n");
   } else {
-  printf("GANHOU Cidade 2 tem maior população.\n");
+ printf("GANHOU Cidade 2 tem maior população.\n");
   }
 
-  printf("\nATRIBUTO: ÁREA\n");
+ printf("\nATRIBUTO: ÁREA\n");
  printf("\nGANHOU Cidade 1 %s : %f \n" , cidade1 , area1);
  printf("GANHOU Cidade 2 %s  : %f \n" , cidade2 ,area2);
 
 if (area1 > area2) {
-  printf(" GANHOU Cidade 1 tem maior área.\n");
+ printf(" GANHOU Cidade 1 tem maior área.\n");
   } else {
-  printf("GANHOU Cidade 2 tem maior área.\n");
+ printf("GANHOU Cidade 2 tem maior área.\n");
   }
 
-  printf("\nATRIBUTO: PIB\n");
+ printf("\nATRIBUTO: PIB\n");
  printf("\nGANHOU Cidade 1 %s : %f \n" , cidade1 , pib1);
  printf("GANHOU Cidade 2 %s  : %f \n" , cidade2 ,pib2);
 
@@ -138,9 +138,9 @@ if (pib1 > pib2) {
   } else {
   printf("GANHOU Cidade 2 tem maior PIB.\n");
   }
-printf("\nATRIBUTO: Pontos Turisticos\n");
- printf("\nGANHOU Cidade 1 %s : %d \n" , cidade1 , pontos1);
- printf("GANHOU Cidade 2 %s  : %d \n" , cidade2 ,pontos2);
+  printf("\nATRIBUTO: Pontos Turisticos\n");
+  printf("\nGANHOU Cidade 1 %s : %d \n" , cidade1 , pontos1);
+  printf("GANHOU Cidade 2 %s  : %d \n" , cidade2 ,pontos2);
 
 if (pontos1 > pontos2) {
   printf("GANHOU Cidade 1 tem maior pontos turisticos.\n");
@@ -148,7 +148,7 @@ if (pontos1 > pontos2) {
   printf("GANHOU Cidade 2 tem maior pontos turisticos.\n");
   }    
 
-printf("\nATRIBUTO: Densidade Populacional\n");
+ printf("\nATRIBUTO: Densidade Populacional\n");
  printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , densidade_populacional1);
  printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , densidade_populacional2);
 
@@ -158,9 +158,9 @@ if (densidade_populacional1 < densidade_populacional2) {
   printf("GANHOU Cidade 2 tem menor Densidade Populacional.\n");
   }  
 
-printf("\nATRIBUTO: PIP PER CAPITA \n");
- printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , pib_per_capita1);
- printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , pib_per_capita2);
+  printf("\nATRIBUTO: PIP PER CAPITA \n");
+  printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , pib_per_capita1);
+  printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , pib_per_capita2);
 
 if (pib_per_capita1 > pib_per_capita2) {
   printf("GANHOU Cidade 1 tem maior PIB PER CAPITA.\n");
@@ -169,8 +169,8 @@ if (pib_per_capita1 > pib_per_capita2) {
   }
         
   printf("\nATRIBUTO: SUPER TRUFO\n");
- printf("\nGANHOU Cidade 1 %s : %u \n" , cidade1 , super_trunfo1);
- printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 , super_trunfo2);
+  printf("\nGANHOU Cidade 1 %s : %u \n" , cidade1 , super_trunfo1);
+  printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 , super_trunfo2);
 
 if (super_trunfo1 > super_trunfo2) {
   printf("Cidade 1 GANHOU NO SUPER TRUFO.\n");
