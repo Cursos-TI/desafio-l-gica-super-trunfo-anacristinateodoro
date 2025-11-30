@@ -99,8 +99,8 @@ int main() {
 
 //ARMAZENAMENTO SUPER TRUNFO - SOMA DO RESULTADO DE CADA CARTA
 
-long int super_trunfo1 = (float) populacao1 + area1 + pib1 + pontos1 + pib_per_capita1;
-long int super_trunfo2 = (float) populacao2 + area2 + pib2 + pontos2 + pib_per_capita2;
+float super_trunfo1 = populacao1 + area1 + pib1 + pontos1 + pib_per_capita1;
+float super_trunfo2 = populacao2 + area2 + pib2 + pontos2 + pib_per_capita2;
 
 //COMPARAÇÃO DAS CARTAS - DEFININDO O VENCEDOR COM ESTRUTURA DE DECISÃO
 
@@ -149,7 +149,7 @@ printf("\nATRIBUTO: Densidade Populacional\n");
  printf("\nCidade 1 %s : %.2f \n" , cidade1 , densidade_populacional1);
  printf("Cidade 2 %s  : %.2f \n" , cidade2 , densidade_populacional2);
 
-if (densidade_populacional1 > densidade_populacional2) {
+if (densidade_populacional1 < densidade_populacional2) {
   printf("Cidade 1 tem menor Densidade Popupacional.\n");
   } else {
   printf("Cidade 2 tem menor Densidade Populacional.\n");
