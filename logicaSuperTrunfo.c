@@ -148,7 +148,7 @@ case 2:
 
  if (area1 > area2){
 
-  printf(" CIDADE %s : %fu\n", cidade1 , area1);
+  printf(" CIDADE %s : %f\n", cidade1 , area1);
   printf(" CIDADE %s : %f\n", cidade2 , area2);
   printf("Aréa: CIDADE %s  VENCEU!!!\n" , cidade1);
 
@@ -187,14 +187,14 @@ case 5:
 
  if (densidade_populacional1 < densidade_populacional2){
 
-  printf(" CIDADE %s : %d\n", cidade1 , densidade_populacional1);
-  printf(" CIDADE %s : %d\n", cidade2 , densidade_populacional2);
+  printf(" CIDADE %s : %.2f\n", cidade1 , densidade_populacional1);
+  printf(" CIDADE %s : %.2f\n", cidade2 , densidade_populacional2);
   printf("PONTOS TURISTICOS: CIDADE %s  VENCEU!!!\n" , cidade1);
 
 }else if (densidade_populacional1 > densidade_populacional2){ 
 
-  printf(" CIDADE %s : %d\n", cidade1 , densidade_populacional1);
-  printf(" CIDADE %s : %d\n", cidade2 , densidade_populacional2);
+  printf(" CIDADE %s : %.2f\n", cidade1 , densidade_populacional1);
+  printf(" CIDADE %s : %.2f\n", cidade2 , densidade_populacional2);
   printf("Pontos Turisticos: CIDADE %s  VENCEU!!!\n" , cidade2);
 
 }else { 
