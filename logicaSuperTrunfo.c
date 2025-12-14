@@ -125,8 +125,9 @@ printf("ATRIBUTO VENCEDOR:\n");
 switch(opcao){
 
   case 1:
- printf("\nATRIBUTO: POPULAÇÃO\n")
-  if (populacao1 > populacao2){
+ printf("\nATRIBUTO: POPULAÇÃO\n");
+
+ if (populacao1 > populacao2){
 
   printf(" CIDADE %s : %u\n", cidade1 , populacao1);
   printf(" CIDADE %s : %u\n", cidade2 , populacao2);
@@ -138,51 +139,67 @@ switch(opcao){
   printf(" CIDADE %s : %u\n", cidade2 , populacao2);
   printf("População: CIDADE %s  VENCEU!!!\n" , cidade2);
 
-
 }else { 
   printf("POPULAÇAÕ: EMPATE!!!");
-}
+}break;
+
 case 2:
- printf("\nATRIBUTO: ARÉA\n")
+ printf("\nATRIBUTO: ARÉA\n");
+
  if (area1 > area2){
 
-  printf(" CIDADE %s : %u\n", cidade1 , area1);
-  printf(" CIDADE %s : %u\n", cidade2 , area2);
+  printf(" CIDADE %s : %fu\n", cidade1 , area1);
+  printf(" CIDADE %s : %f\n", cidade2 , area2);
   printf("Aréa: CIDADE %s  VENCEU!!!\n" , cidade1);
 
 }else if (area1 < area2){ 
 
-  printf(" CIDADE %s : %u\n", cidade1 , area1);
-  printf(" CIDADE %s : %u\n", cidade2 , area2);
+  printf(" CIDADE %s : %f\n", cidade1 , area1);
+  printf(" CIDADE %s : %f\n", cidade2 , area2);
   printf("População: CIDADE %s  VENCEU!!!\n" , cidade2);
 
 }else { 
   printf("ÁREA: EMPATE!!!");
-}
+}break;
+
+case 3:
+ printf("\nATRIBUTO: PIB\n");
+
+ if (pib1 > pib2){
+
+  printf(" CIDADE %s : %.2f\n", cidade1 , pib1);
+  printf(" CIDADE %s : %.2f\n", cidade2 , pib2);
+  printf("PIB: CIDADE %s  VENCEU!!!\n" , cidade1);
+
+}else if (populacao1 < populacao2){ 
+
+  printf(" CIDADE %s : %.2f\n", cidade1 , pib1);
+  printf(" CIDADE %s : %.2f\n", cidade2 , pib2);
+  printf("PIB: CIDADE %s  VENCEU!!!\n" , cidade2);
+
+}else { 
+  printf("PIB: EMPATE!!!");
+}break;
 
 
+case 5:
+ printf("\nATRIBUTO: DENSIDADE DEMOGRÁFICA\n");
 
+ if (densidade_populacional1 < densidade_populacional2){
 
+  printf(" CIDADE %s : %d\n", cidade1 , densidade_populacional1);
+  printf(" CIDADE %s : %d\n", cidade2 , densidade_populacional2);
+  printf("PONTOS TURISTICOS: CIDADE %s  VENCEU!!!\n" , cidade1);
 
+}else if (densidade_populacional1 > densidade_populacional2){ 
 
+  printf(" CIDADE %s : %d\n", cidade1 , densidade_populacional1);
+  printf(" CIDADE %s : %d\n", cidade2 , densidade_populacional2);
+  printf("Pontos Turisticos: CIDADE %s  VENCEU!!!\n" , cidade2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}else { 
+  printf("DENSIDADE POPULACIONAL: EMPATE!!!");
+}break;
 
 
 }
