@@ -1,5 +1,7 @@
 
 #include <stdio.h>
+#include<stdlib.h>
+
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
@@ -22,6 +24,8 @@ int main() {
     int pontos2;
     float area2;
     float pib2;
+
+    
 
    //ENTRADA DE DADOS DA CARTA 1
     printf("PREENCHA AS INFORMAÇÕES DAS SUAS CARTAS \n");
@@ -77,7 +81,7 @@ int main() {
     
     //EXIBIÇÃO CARTA 1
 
-  printf("****CARTA 1****\n\n");
+  printf("\n****CARTA 1****\n\n");
   printf("Estado: %s\n", estado1);
   printf("Código da carta: %s\n", codigo1);
   printf("Cidade: %s\n", cidade1);
@@ -101,82 +105,165 @@ int main() {
   printf("PIB: %.2f\n", pib2);
   printf("Pontos Turisticos: %d\n", pontos2);
   printf("Densidade Populacional: %.2f hab/km²\n" , densidade_populacional2 );
-  printf("PIB PER CAPITA:  %.2f Reais\n" , pib_per_capita2 );
-  printf("SUPER TRUNFO: %u \n" , super_trunfo2);
+  printf("PIB PER CAPITA:  %.2f Reais\n\n" , pib_per_capita2 );
+  printf("SUPER TRUNFO: %u \n\n" , super_trunfo2);
 
 
-//COMPARAÇÃO DAS CARTAS - DEFININDO O VENCEDOR COM ESTRUTURA DE DECISÃO
+//DEFININDO O VENCEDOR COM ESTRUTURA DE DECISÃO E MENU COM SWITCH
 
- printf("\n======COMPARAÇÃO DAS CARTAS======\n");
+int opcao;
+
+printf("\n****ESCOLHA UM ATRIBUTO PARA COMPARAÇÃO****\n");
+printf("1- POPULAÇÃO\n");
+printf("2- ÁREA\n");
+printf("3- PIB\n");
+printf("4- NÚMERO DE PONTOS TURISTICOS\n");
+printf("5- DENSIDADE DEMOGRÁFICA\n");
+scanf("%d", &opcao);
+
+printf("ATRIBUTO VENCEDOR:\n");
+switch(opcao){
+
+  case 1:
+ printf("\nATRIBUTO: POPULAÇÃO\n")
+  if (populacao1 > populacao2){
+
+  printf(" CIDADE %s : %u\n", cidade1 , populacao1);
+  printf(" CIDADE %s : %u\n", cidade2 , populacao2);
+  printf("População: CIDADE %s  VENCEU!!!\n" , cidade1);
+
+}else if (populacao1 < populacao2){ 
+
+  printf(" CIDADE %s : %u\n", cidade1 , populacao1);
+  printf(" CIDADE %s : %u\n", cidade2 , populacao2);
+  printf("População: CIDADE %s  VENCEU!!!\n" , cidade2);
+
+
+}else { 
+  printf("POPULAÇAÕ: EMPATE!!!");
+}
+case 2:
+ printf("\nATRIBUTO: ARÉA\n")
+ if (area1 > area2){
+
+  printf(" CIDADE %s : %u\n", cidade1 , area1);
+  printf(" CIDADE %s : %u\n", cidade2 , area2);
+  printf("Aréa: CIDADE %s  VENCEU!!!\n" , cidade1);
+
+}else if (area1 < area2){ 
+
+  printf(" CIDADE %s : %u\n", cidade1 , area1);
+  printf(" CIDADE %s : %u\n", cidade2 , area2);
+  printf("População: CIDADE %s  VENCEU!!!\n" , cidade2);
+
+}else { 
+  printf("ÁREA: EMPATE!!!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+//printf("\n======COMPARAÇÃO DAS CARTAS======\n");
  
- printf("\nATRIBUTO: POPULAÇÃO\n");
- printf("\nGANHOU Cidade 1 %s : %u \n" , cidade1 , populacao1);
- printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 ,populacao2);
+ //printf("\nATRIBUTO: POPULAÇÃO\n");
+ //printf("\nGANHOU Cidade 1 %s : %u \n" , cidade1 , populacao1);
+ //printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 ,populacao2);
 
-if (populacao1 > populacao2) {
- printf("GANHOU Cidade 1 tem maior população.\n");
-  } else {
- printf("GANHOU Cidade 2 tem maior população.\n");
-  }
+//if (populacao1 > populacao2) {
+ //printf("GANHOU Cidade 1 tem maior população.\n");
+//  } else {
+// printf("GANHOU Cidade 2 tem maior população.\n");
+//  }
 
- printf("\nATRIBUTO: ÁREA\n");
- printf("\nGANHOU Cidade 1 %s : %f \n" , cidade1 , area1);
- printf("GANHOU Cidade 2 %s  : %f \n" , cidade2 ,area2);
+ //printf("\nATRIBUTO: ÁREA\n");
+ //printf("\nGANHOU Cidade 1 %s : %f \n" , cidade1 , area1);
+ //printf("GANHOU Cidade 2 %s  : %f \n" , cidade2 ,area2);
 
-if (area1 > area2) {
- printf(" GANHOU Cidade 1 tem maior área.\n");
-  } else {
- printf("GANHOU Cidade 2 tem maior área.\n");
-  }
+//if (area1 > area2) {
+ //printf(" GANHOU Cidade 1 tem maior área.\n");
+//  } else {
+// printf("GANHOU Cidade 2 tem maior área.\n");
+//  }
 
- printf("\nATRIBUTO: PIB\n");
- printf("\nGANHOU Cidade 1 %s : %f \n" , cidade1 , pib1);
- printf("GANHOU Cidade 2 %s  : %f \n" , cidade2 ,pib2);
+// printf("\nATRIBUTO: PIB\n");
+ //printf("\nGANHOU Cidade 1 %s : %f \n" , cidade1 , pib1);
+ //printf("GANHOU Cidade 2 %s  : %f \n" , cidade2 ,pib2);
 
-if (pib1 > pib2) {
-  printf("GANHOU Cidade 1 tem maior PIB.\n");
-  } else {
-  printf("GANHOU Cidade 2 tem maior PIB.\n");
-  }
-  printf("\nATRIBUTO: Pontos Turisticos\n");
-  printf("\nGANHOU Cidade 1 %s : %d \n" , cidade1 , pontos1);
-  printf("GANHOU Cidade 2 %s  : %d \n" , cidade2 ,pontos2);
+//if (pib1 > pib2) {
+ // printf("GANHOU Cidade 1 tem maior PIB.\n");
+ // } else {
+ // printf("GANHOU Cidade 2 tem maior PIB.\n");
+ // }
+  //printf("\nATRIBUTO: Pontos Turisticos\n");
+ // printf("\nGANHOU Cidade 1 %s : %d \n" , cidade1 , pontos1);
+ // printf("GANHOU Cidade 2 %s  : %d \n" , cidade2 ,pontos2);
 
-if (pontos1 > pontos2) {
-  printf("GANHOU Cidade 1 tem maior pontos turisticos.\n");
-  } else {
-  printf("GANHOU Cidade 2 tem maior pontos turisticos.\n");
-  }    
+//if (pontos1 > pontos2) {
+  //printf("GANHOU Cidade 1 tem maior pontos turisticos.\n");
+  //} else {
+ // printf("GANHOU Cidade 2 tem maior pontos turisticos.\n");
+ // }    
 
- printf("\nATRIBUTO: Densidade Populacional\n");
- printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , densidade_populacional1);
- printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , densidade_populacional2);
+ //printf("\nATRIBUTO: Densidade Populacional\n");
+ //printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , densidade_populacional1);
+ //printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , densidade_populacional2);
 
-if (densidade_populacional1 < densidade_populacional2) {
-  printf("GANHOU Cidade 1 tem menor Densidade Popupacional.\n");
-  } else {
-  printf("GANHOU Cidade 2 tem menor Densidade Populacional.\n");
-  }  
+//if (densidade_populacional1 < densidade_populacional2) {
+ // printf("GANHOU Cidade 1 tem menor Densidade Popupacional.\n");
+//  } else {
+ // printf("GANHOU Cidade 2 tem menor Densidade Populacional.\n");
+//  }  
 
-  printf("\nATRIBUTO: PIP PER CAPITA \n");
-  printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , pib_per_capita1);
-  printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , pib_per_capita2);
+//  printf("\nATRIBUTO: PIP PER CAPITA \n");
+//  printf("\nGANHOU Cidade 1 %s : %.2f \n" , cidade1 , pib_per_capita1);
+ // printf("GANHOU Cidade 2 %s  : %.2f \n" , cidade2 , pib_per_capita2);
 
-if (pib_per_capita1 > pib_per_capita2) {
-  printf("GANHOU Cidade 1 tem maior PIB PER CAPITA.\n");
-  } else {
-  printf("GANHOU Cidade 2 tem maior PIB PER CAPITA.\n");
-  }
+//if (pib_per_capita1 > pib_per_capita2) {
+//  printf("GANHOU Cidade 1 tem maior PIB PER CAPITA.\n");
+//  } else {
+//  printf("GANHOU Cidade 2 tem maior PIB PER CAPITA.\n");
+//  }
         
-  printf("\nATRIBUTO: SUPER TRUFO\n");
-  printf("\nGANHOU Cidade 1 %s : %u \n" , cidade1 , super_trunfo1);
-  printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 , super_trunfo2);
+//  printf("\nATRIBUTO: SUPER TRUFO\n");
+//  printf("\nGANHOU Cidade 1 %s : %u \n" , cidade1 , super_trunfo1);
+//  printf("GANHOU Cidade 2 %s  : %u \n" , cidade2 , super_trunfo2);
 
-if (super_trunfo1 > super_trunfo2) {
-  printf("Cidade 1 GANHOU NO SUPER TRUFO.\n");
-  } else {
-  printf("Cidade 2 GANHOU NO SUPER TRUFO.\n");
-  }
+//if (super_trunfo1 > super_trunfo2) {
+//  printf("Cidade 1 GANHOU NO SUPER TRUFO.\n");
+//  } else {
+//  printf("Cidade 2 GANHOU NO SUPER TRUFO.\n");
+//  }
 
 return 0;
 }  
